@@ -62,7 +62,7 @@ const uploadMeme = async (pureBase64, upperText, lowerText, applyGrayscale) => {
     generateButton.disabled = true;
     generateButton.textContent = "Generating...";
 
-    const response = await fetch("/upload", {
+    const response = await fetch("/api/upload", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
