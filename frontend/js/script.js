@@ -1,3 +1,6 @@
+const API_URL =
+  "https://meme-generator-csci3172.netlify.app/.netlify/functions/api";
+
 const generateMeme = async () => {
   const fileInput = document.getElementById("formFile");
   const file = fileInput.files[0];
@@ -62,7 +65,7 @@ const uploadMeme = async (pureBase64, upperText, lowerText, applyGrayscale) => {
     generateButton.disabled = true;
     generateButton.textContent = "Generating...";
 
-    const response = await fetch("/api/upload", {
+    const response = await fetch(`${API_URL}/upload`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
