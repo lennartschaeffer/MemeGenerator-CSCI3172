@@ -133,7 +133,7 @@ router.post("/upload", async (req, res) => {
   }
 });
 
-app.use("/", router);
+app.use("/api/", router);
 export { app };
 // Export handler for serverless
 export const handler = serverless(app);

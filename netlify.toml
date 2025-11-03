@@ -1,3 +1,9 @@
+[build]
+    publish = "frontend"
+
+[dev]
+    publish = "frontend"
+
 [functions]
     external_node_modules = ["express"]
     node_bundler = "esbuild"
